@@ -1,7 +1,9 @@
 import Articles from "./sections/Articles/articles";
 import BookSection from "./sections/BookSection/bookSection";
+import ContactForm from "./sections/ContactUs/contactUs";
 import Experts from "./sections/Experts/experts";
 import Hero from "./sections/Hero/hero";
+import Partners from "./sections/Partners/partners";
 import Services from "./sections/Services/services";
 
 export default function Home() {
@@ -13,6 +15,8 @@ export default function Home() {
         <BookSection />
         <Articles />
         <Experts />
+        <Partners />
+        <ContactForm />
       </div>
     </div>
   );

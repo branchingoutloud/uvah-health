@@ -20,10 +20,10 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <nav className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between h-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="flex h-16 justify-between">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
+          <div className="flex flex-shrink-0 items-center">
             <Link href="/" className="text-2xl font-bold text-gray-800">
               <Image
                 width={150}
@@ -35,8 +35,8 @@ export default function Navbar() {
           </div>
 
           {/* Navigation Menu */}
-          <NavigationMenu className="hidden sm:flex sm:items-center sm:justify-center flex-1">
-            <NavigationMenuList key={1} className="flex space-x-4">
+          <NavigationMenu className="hidden flex-1 sm:flex sm:items-center sm:justify-center">
+            <NavigationMenuList className="flex space-x-4">
               {contents.navbar.links.map((component) => {
                 if (!component?.elements) {
                   return (
@@ -64,7 +64,7 @@ export default function Navbar() {
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                        <li className="row-span-3">
+                        <li key={1} className="row-span-3">
                           <NavigationMenuLink asChild>
                             <a
                               className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
@@ -118,7 +118,7 @@ export default function Navbar() {
           <div className="flex items-center sm:hidden">
             <Button
               variant="ghost"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
             >
               <span className="sr-only">Open main menu</span>
               {/* Icon when menu is closed */}
@@ -159,34 +159,34 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu, show/hide based on menu state */}
-      <div className="sm:hidden hidden">
-        <div className="px-2 pt-2 pb-3 space-y-1">
+      <div className="hidden sm:hidden">
+        <div className="space-y-1 px-2 pb-3 pt-2">
           <Link
             href="/"
-            className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium"
+            className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900"
           >
             Home
           </Link>
           <Link
             href="/about"
-            className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium"
+            className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900"
           >
             About
           </Link>
           <Link
             href="/services"
-            className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium"
+            className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900"
           >
             Services
           </Link>
           <Link
             href="/contact"
-            className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium"
+            className="block rounded-md px-3 py-2 text-base font-medium text-gray-600 hover:text-gray-900"
           >
             Contact
           </Link>
         </div>
-        <div className="pt-4 pb-3 border-t border-gray-200">
+        <div className="border-t border-gray-200 pb-3 pt-4">
           <div className="flex items-center px-4">
             <Button variant="outline" className="mr-2 w-full">
               Sign In

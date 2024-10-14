@@ -4,9 +4,15 @@ import {
   CardImage2,
   DnaImage,
   DoctorImage1,
+  Expert1,
+  Expert2,
+  Expert5,
+  Expert6,
+  Expert7,
   NavLogo,
   ProfileFallback,
 } from "@/public";
+import { FacebookIcon, LinkedinIcon } from "lucide-react";
 
 export const contents = {
   navbar: {
@@ -206,7 +212,7 @@ export const contents = {
         name: "DR. K.V. Brinda",
         designation: "Lead Radiologist",
         qualification: "MBBS, MD Radiology",
-        image: ProfileFallback,
+        image: Expert1,
         about: "Dr. Jane Doe is a gynecologist with 10 years of experience",
       },
       {
@@ -214,32 +220,117 @@ export const contents = {
         name: "Dr. Lalitha",
         designation: "Lead Pathologist",
         qualification: "MBBS, MD Pathology",
-        image: ProfileFallback,
+        image: Expert2,
         about: "Dr. Jane Doe is a gynecologist with 10 years of experience",
       },
       {
         id: 3,
-        name: "DR. K.V. Brinda",
-        designation: "Lead Radiologist",
-        qualification: "MBBS, MD Radiology",
+        name: "Dr. Raj Madhangi",
+        designation: "General Medicine Consultant",
+        qualification: "MBBD, MD General Medicine",
         image: ProfileFallback,
         about: "Dr. Jane Doe is a gynecologist with 10 years of experience",
       },
       {
         id: 4,
-        name: "DR. K.V. Brinda",
-        designation: "Lead Radiologist",
-        qualification: "MBBS, MD Radiology",
+        name: "Dr. Suganya Devi",
+        designation: "Gynecologist",
+        qualification: "MBBS, MS OBG-YN",
         image: ProfileFallback,
         about: "Dr. Jane Doe is a gynecologist with 10 years of experience",
       },
       {
         id: 5,
-        name: "DR. K.V. Brinda",
-        designation: "Lead Radiologist",
-        qualification: "MBBS, MD Radiology",
-        image: ProfileFallback,
+        name: "Dr. Chenthil",
+        designation: "General Surgeon",
+        qualification: "MBBS, MS General Surgery",
+        image: Expert5,
         about: "Dr. Jane Doe is a gynecologist with 10 years of experience",
+      },
+      {
+        id: 6,
+        name: "Barath Ananda",
+        designation: "Investor",
+        qualification: "MBA Kellogg School of Management",
+        image: Expert6,
+        about: "Dr. Jane Doe is a gynecologist with 10 years of experience",
+      },
+      {
+        id: 7,
+        name: "Anup Sawant",
+        designation: "AI specialist and Tech expert",
+        qualification:
+          "Consultant at NASA, CDO at IIT-M Northwestern University",
+        image: Expert7,
+        about: "Dr. Jane Doe is a gynecologist with 10 years of experience",
+      },
+    ],
+  },
+  bookAppointment: {
+    title: "Patient&apos;s Basic Details",
+    description:
+      "Before You Begin with process: Please ensure all submitted documents are clear, well-organized, and ready for upload when needed. This will assist our doctors in quickly and easily understanding the patient&apos;s medical history and background, ensuring the best possible care.",
+    dropdownOptions: {
+      countryCodes: ["+91", "+1", "+44", "+61", "+971"],
+      appointmentTypes: ["In-Person", "Teleconsultation"],
+      services: ["sonography", "ECG", "Blood Test", "Urine Analysis"],
+    },
+  },
+  footer: {
+    logo: NavLogo,
+    description:
+      "We deliver accurate diagnoses and personalized healthcare solutions, guiding you toward better health with expert support every step of the way.",
+    pages: [
+      {
+        id: 1,
+        title: "About Us",
+        link: "#",
+      },
+      {
+        id: 2,
+        title: "Services",
+        link: "#",
+      },
+      {
+        id: 3,
+        title: "Contact Us",
+        link: "#",
+      },
+      {
+        id: 4,
+        title: "Blog",
+        link: "#",
+      },
+    ],
+    company: [
+      {
+        id: 1,
+        title: "Privacy Policy",
+        link: "#",
+      },
+      {
+        id: 2,
+        title: "Terms & Conditions",
+        link: "#",
+      },
+    ],
+    contact: {
+      phoneNo: "+91 9500020255",
+      mail: "care@uvahhealth.com",
+      address:
+        "5/98, Venkateswara Nagar Road, Venkateswara Nagar, Anna Nagar, HL Colony, Pozhichalur, Chennai, Tamil Nadu 600074, India",
+      openingHours: "09:00 am to 05:00 pm",
+    },
+    socialLinks: [
+      {
+        id: 1,
+        link: "",
+        logo: FacebookIcon,
+      },
+      {
+        id: 2,
+        link: "",
+        logo: LinkedinIcon,
       },
     ],
   },

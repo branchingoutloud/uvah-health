@@ -1,29 +1,32 @@
 import { contents } from "@/utilities/constants/constants";
 import { colors } from "@/utilities/themes/colors";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col">
-        <div className="lg:flex-grow md:w-1/2  flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 className="title-font text-exlarge mb-4 font-semibold text-gray-900">
+    <section className="body-font text-gray-600">
+      <div className="container mx-auto flex flex-col px-5 py-24 md:flex-row">
+        <div className="mb-16 flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:text-left lg:flex-grow">
+          <h1 className="title-font mb-4 text-exlarge font-semibold text-gray-900">
             Transforming Women's <br />
             Health with <span className="text-primary">Care</span>
           </h1>
-          <p className="mb-8 text-text text-med leading-relaxed">
+          <p className="mb-8 text-med leading-relaxed text-text">
             {contents.hero.description}
           </p>
           <div className="flex justify-center">
-            <button
-              className={`inline-flex text-white bg-primary border-0 py-4 px-8 focus:outline-none hover:bg-primary rounded-xl text-med`}
-            >
-              {contents.hero.button}
-            </button>
+            <Link href="/book-appointment">
+              <button
+                className={`inline-flex rounded-xl border-0 bg-primary px-8 py-4 text-med text-white hover:bg-primary focus:outline-none`}
+              >
+                {contents.hero.button}
+              </button>
+            </Link>
           </div>
         </div>
-        <div className="relative flex justify-center items-center lg:max-w-2xl w-full ">
+        <div className="relative flex w-full items-center justify-center lg:max-w-2xl">
           <Image
             className="absolute object-cover object-center md:translate-x-16"
             src={contents.hero.image}

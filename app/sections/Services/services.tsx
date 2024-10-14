@@ -36,7 +36,7 @@ const Services = () => {
       <div className="container mx-auto px-5 py-16">
         <Collapsible open={isOpen} onOpenChange={setIsOpen} className="">
           <div className="mb-12 flex justify-between text-center">
-            <H2 className="font-semibold">
+            <H2 className="">
               <span className="text-primary">UVAH Health</span> Service
             </H2>
             <CollapsibleTrigger asChild>
