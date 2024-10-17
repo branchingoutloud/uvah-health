@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="bg-teal-100 py-8 text-gray-700">
       <div className="container mx-auto px-4">
-        <div className="mb-4 flex justify-between">
+        <div className="mb-4 flex flex-col justify-between md:flex-row">
           {/* Logo */}
           <Image
             src={contents.footer.logo}
@@ -19,14 +19,14 @@ export default function Footer() {
             height={80}
           />
           {/* Email Subscription */}
-          <div className="flex flex-col items-center justify-between sm:flex-row">
+          <div className="flex flex-col justify-between sm:flex-row md:items-center">
             <div className="mb-4 flex max-w-md">
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full bg-white"
+                className="w-full rounded-br-none rounded-tr-none bg-white"
               />
-              <Button className="bg-teal-600 text-white hover:bg-teal-700">
+              <Button className="rounded-bl-none rounded-tl-none bg-teal-600 text-white hover:bg-teal-700">
                 SUBMIT
               </Button>
             </div>

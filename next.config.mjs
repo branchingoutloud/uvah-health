@@ -6,7 +6,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "http",
-        hostname: "10.16.140.72", // Specific IP address
+        hostname: "10.16.140.129", // Specific IP address
         port: "8001", // Specific port
         pathname: "/media/**", // Path matching your image source
       },

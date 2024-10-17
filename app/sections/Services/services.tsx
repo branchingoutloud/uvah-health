@@ -8,8 +8,6 @@ import H2 from "@/app/components/Headings/H2/h2";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/lib/store/store";
 import { fetchServices } from "@/lib/store/slices/services/thunks";
-import { addServices } from "@/lib/store/slices/services/reducer";
-import { CardImage1 } from "@/public";
 import {
   Collapsible,
   CollapsibleContent,
@@ -33,22 +31,22 @@ const Services = () => {
 
   return (
     <section className="body-font">
-      <div className="container mx-auto px-5 py-16">
+      <div className="container mx-auto px-5 py-10 md:py-16">
         <Collapsible open={isOpen} onOpenChange={setIsOpen} className="">
-          <div className="mb-12 flex justify-between text-center">
+          <div className="mb-7 flex justify-center text-center md:mb-12 md:justify-between">
             <H2 className="">
               <span className="text-primary">UVAH Health</span> Service
             </H2>
-            <CollapsibleTrigger asChild>
+            <CollapsibleTrigger className="hidden md:block" asChild>
               <Button
                 variant="outline"
                 className="px-4 py-2 text-exsmall text-primary"
               >
-                See More
+                {!isOpen ? "See More" : "See Less"}
               </Button>
             </CollapsibleTrigger>
           </div>
-          <div className="-m-4 flex flex-wrap">
+          <div className="flex flex-wrap">
             {!loading || !error ? (
               services.map((service, index) => {
                 if (index < 3) {
@@ -58,7 +56,7 @@ const Services = () => {
                       key={service.id}
                       title={service.name}
                       description={service.serviceDes}
-                      image={service.serviceImage}
+                      image={service.serviceImage || ""}
                     />
                   );
                 }
@@ -67,7 +65,7 @@ const Services = () => {
               <p>Loading...</p>
             )}
           </div>
-          <CollapsibleContent className="-m-4 flex flex-wrap">
+          <CollapsibleContent className="mb-4 flex flex-wrap">
             {!loading || !error ? (
               services.map((service, index) => {
                 if (index >= 3) {
@@ -77,7 +75,7 @@ const Services = () => {
                       key={service.id}
                       title={service.name}
                       description={service.serviceDes}
-                      image={service.serviceImage}
+                      image={service.serviceImage || ""}
                     />
                   );
                 }
@@ -86,6 +84,14 @@ const Services = () => {
               <p>Loading...</p>
             )}
           </CollapsibleContent>
+          <CollapsibleTrigger className="w-full md:hidden" asChild>
+            <Button
+              variant="outline"
+              className="px-4 py-2 text-exsmall text-primary"
+            >
+              {!isOpen ? "See More" : "See Less"}
+            </Button>
+          </CollapsibleTrigger>
         </Collapsible>
       </div>
     </section>

@@ -9,6 +9,8 @@ import {
   Expert5,
   Expert6,
   Expert7,
+  HeroImage,
+  HeroImagePopup,
   NavLogo,
   ProfileFallback,
 } from "@/public";
@@ -58,7 +60,8 @@ export const contents = {
     description:
       "Your trusted partner in accurate diagnoses and personalized healthcare, guiding you to better health with tailored solutions and expert care.",
     button: "Book an Appointment",
-    image: "/images/heroImage.png",
+    image: HeroImage,
+    imagePopup: HeroImagePopup,
   },
   services: {
     title: "UVAH Health Services",

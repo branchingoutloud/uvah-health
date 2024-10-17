@@ -4,11 +4,11 @@ import { contents } from "@/utilities/constants/constants";
 
 export default function Card3() {
   return (
-    <div className="relative w-full h-full">
-      <div className="flex h-24 w-28 z-40 bg-background rounded-tr-3xl absolute bottom-0 left-0 border-t border-r border-primary">
-        <div className="h-20 w-24 absolute bottom-0 left-0 rounded-2xl bg-primary"></div>
+    <div className="relative h-80 w-full md:h-full">
+      <div className="absolute bottom-0 left-0 z-40 flex h-24 w-28 rounded-tr-3xl border-r border-t border-primary bg-background">
+        <div className="absolute bottom-0 left-0 h-20 w-24 rounded-2xl bg-primary"></div>
       </div>
-      <Card className="w-md h-full overflow-hidden rounded-3xl relative group p-8 border-primary shadow-none">
+      <Card className="w-md group relative h-full overflow-hidden rounded-3xl border-primary p-8 shadow-none">
         <div className="absolute inset-0">
           <Image
             className="z-30"

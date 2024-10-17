@@ -32,8 +32,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { appointmentFormSchema } from "@/utilities/commonInterface/zodSchema";
 import { z } from "zod";
-import { onAppointmentFormSubmit } from "@/utilities/helpers/formHelper/formHelper";
-import Link from "next/link";
+import { onAppointmentFormSubmit } from "@/utilities/helpers/formHelpers/formHelper";
 import { cn } from "@/lib/utils";
 import {
   Popover,
@@ -49,13 +48,13 @@ const AppointmentForm = () => {
     defaultValues: {
       firstName: "",
       lastName: "",
-      birthday: "",
+      birthday: new Date(),
       gender: undefined,
       email: "",
       countryCode: "+91",
       mobileNo: "",
       services: undefined,
-      appointmentDate: "",
+      appointmentDate: new Date(),
       appointmentTime: "",
     },
   });
@@ -160,6 +159,14 @@ const AppointmentForm = () => {
                         <PopoverContent className="w-auto p-0" align="start">
                           <Calendar
                             mode="single"
+                            fromYear={new Date().getFullYear() - 100}
+                            toDate={
+                              new Date(
+                                Date.now() - 1000 * 60 * 60 * 24 * 365 * 18
+                              )
+                            }
+                            fixedWeeks
+                            captionLayout="dropdown-buttons"
                             selected={
                               field.value ? new Date(field.value) : undefined
                             }

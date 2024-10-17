@@ -5,7 +5,7 @@ import {
 } from "@/utilities/commonInterface/commonInterface";
 
 /* eslint-disable no-useless-catch */
-let BASE_URL = "http://10.16.140.72:8001/";
+let BASE_URL = "http://10.16.140.129:8001/";
 // BASE_URL = "http://10.44.17.18:8001/";
 // BASE_URL = 'http://10.44.22.83:8008/'
 // BASE_URL = "http://localhost:8008/";

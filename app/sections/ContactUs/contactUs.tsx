@@ -2,14 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import H1 from "@/app/components/Headings/H1/h1";
+import H2 from "@/app/components/Headings/H2/h2";
 
 export default function ContactForm() {
   return (
-    <div className="mx-auto w-full px-4 py-8">
-      <H1 className="mb-12">We'd Love to Hear from You</H1>
+    <div className="mx-auto w-full px-4 py-10 md:py-12">
+      <H2 className="mb-12">We'd Love to Hear from You</H2>
       <Card className="flex w-full justify-center border-none bg-white shadow-none">
-        <CardContent className="w-full max-w-3xl px-12 py-6 shadow-lg">
+        <CardContent className="w-full max-w-3xl rounded-lg py-6 shadow-lg md:px-12">
           <form className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div>

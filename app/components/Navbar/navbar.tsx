@@ -86,18 +86,6 @@ export default function Navbar() {
                           Re-usable components built using Radix UI and Tailwind
                           CSS.
                         </ListItem>
-                        {/* <ListItem
-                            href="/docs/installation"
-                            title="Installation"
-                          >
-                            How to install dependencies and structure your app.
-                          </ListItem>
-                          <ListItem
-                            href="/docs/primitives/typography"
-                            title="Typography"
-                          >
-                            Styles for headings, paragraphs, lists...etc
-                          </ListItem> */}
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>

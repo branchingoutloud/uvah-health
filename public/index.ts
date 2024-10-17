@@ -2,6 +2,7 @@ import ArrowOutward from "./images/arrow_outward.svg";
 import CardImage1 from "./images/cardImage1.png";
 import CardImage2 from "./images/cardImage2.png";
 import HeroImage from "./images/heroImage.png";
+import HeroImagePopup from "./images/heroImagePopup.png";
 import DoctorImage1 from "./images/doctorImage1.png";
 import DnaImage from "./images/dnaImage.png";
 import NavLogo from "./images/navLogo.png";
@@ -23,6 +24,7 @@ export {
   CardImage1,
   CardImage2,
   HeroImage,
+  HeroImagePopup,
   DnaImage,
   DoctorImage1,
   NavLogo,
